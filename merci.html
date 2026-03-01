@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message envoyé - ESPOH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1a33;
+            color: #e6e8e6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Tech background effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20px 20px, rgba(160, 193, 217, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 60px 60px, rgba(160, 193, 217, 0.1) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .thankyou-card {
+            background: rgba(19, 41, 75, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(160, 193, 217, 0.1);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 0 30px rgba(52, 152, 219, 0.4);
+            animation: scaleIn 0.5s ease 0.3s both;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .thankyou-message {
+            font-size: 1.2rem;
+            color: #a0c1d9;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            margin: 25px auto;
+            border-radius: 2px;
+        }
+
+        .info-text {
+            color: #8a9bb5;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            font-size: 1rem;
+        }
+
+        .response-time {
+            background: rgba(160, 193, 217, 0.1);
+            border: 1px solid rgba(160, 193, 217, 0.2);
+            border-radius: 50px;
+            padding: 12px 25px;
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #a0c1d9;
+        }
+
+        .response-time i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
+        }
+
+        .btn-back i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-back:hover i {
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(19, 41, 75, 0.5);
+            border: 1px solid rgba(160, 193, 217, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0c1d9;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            transform: translateY(-5px);
+            border-color: transparent;
+        }
+
+        .auto-redirect {
+            margin-top: 25px;
+            color: #5a6d8a;
+            font-size: 0.9rem;
+        }
+
+        .auto-redirect i {
+            color: #3498db;
+            margin: 0 5px;
+        }
+
+        /* Animation de chargement (optionnelle) */
+        .dots {
+            display: inline-block;
+        }
+
+        .dots span {
+            animation: dots 1.5s infinite;
+            opacity: 0;
+        }
+
+        .dots span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .dots span:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes dots {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thankyou-card">
+            <!-- Coche de succès animée -->
+            <div class="checkmark">
+                <i class="fas fa-check"></i>
+            </div>
+
+            <!-- Message principal -->
+            <h1>Message envoyé !</h1>
+            <p class="thankyou-message">Merci de m'avoir contacté</p>
+            
+            <div class="divider"></div>
+
+            <!-- Informations rassurantes -->
+            <p class="info-text">
+                J'ai bien reçu votre message et je l'ai pris en compte.<br>
+                Je vous répondrai dans les plus brefs délais.
+            </p>
+
+            <!-- Délai de réponse -->
+            <div class="response-time">
+                <i class="fas fa-clock"></i> Délai de réponse : 24h - 48h
+            </div>
+
+            <!-- Bouton de retour -->
+            <a href="index.html" class="btn-back">
+                Retour à l'accueil <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <!-- Compteur de redirection automatique (optionnel) -->
+            <div class="auto-redirect" id="redirectMessage">
+                <i class="fas fa-redo-alt"></i> Redirection automatique dans <span id="countdown">10</span> secondes...
+            </div>
+
+            <!-- Réseaux sociaux (optionnel) -->
+            <div class="social-links">
+                <a href="https://github.com/espoir147" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/espoir-sehoun-55021a36b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/takagi147" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/espoir_sehoun" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Redirection automatique après 10 secondes
+        let seconds = 10;
+        const countdownEl = document.getElementById('countdown');
+        const redirectMessage = document.getElementById('redirectMessage');
+
+        function updateCountdown() {
+            seconds--;
+            if (countdownEl) {
+                countdownEl.textContent = seconds;
+            }
+            
+            if (seconds <= 0) {
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Mettre à jour le compteur toutes les secondes
+        const interval = setInterval(updateCountdown, 1000);
+
+        // Animation supplémentaire au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Vous pouvez ajouter des animations ici si besoin
+            console.log('Page de remerciement chargée');
+        });
+
+        // Empêcher la redirection si l'utilisateur survole le bouton (optionnel)
+        document.querySelector('.btn-back').addEventListener('mouseenter', function() {
+            clearInterval(interval);
+            if (redirectMessage) {
+                redirectMessage.style.opacity = '0.5';
+            }
+        });
+
+        document.querySelector('.btn-back').addEventListener('mouseleave', function() {
+            interval = setInterval(updateCountdown, 1000);
+            if (redirectMessage) {
+                redirectMessage.style.opacity = '1';
+            }
+        });
+    </script>
+</body>
+</html>
