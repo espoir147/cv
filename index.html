@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV Numérique - Informaticien</title>
+    <title>ESPOH - Développeur Full Stack & Informaticien</title>
+    <meta name="description" content="Portfolio d'Espoir Sehoun - Développeur Full Stack spécialisé en Laravel, PHP et solutions digitales.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles_modifie.css">
 </head>
 <body>
     <header class="header">
         <nav>
-            <div class="logo">CV<span>Numérique</span></div>
+            <div class="logo">ESPOH</div>
             <ul class="nav-links">
-    <li><a href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
-    <li><a href="#apropos"><i class="fas fa-user"></i> A propos</a></li>
-    <li><a href="#parcours"><i class="fas fa-graduation-cap"></i> Parcours</a></li>
-    <li><a href="#competences"><i class="fas fa-cogs"></i> Compétences</a></li>
-    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-</ul>
-           <!--     <li><a href="#apropos">A propos</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>-->
+                <li><a href="#accueil">_accueil</a></li>
+                <li><a href="#apropos">_apropos</a></li>
+                <li><a href="#experiences">_expériences</a></li>
+                <li><a href="#projets">_projets</a></li>
+                <li><a href="#competences">_compétences</a></li>
+                <li><a href="#contact">_contact</a></li>
+            </ul>
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -33,255 +30,462 @@
     </header>
 
     <main>
+        <!-- ==================== HERO SECTION ==================== -->
         <section id="accueil" class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>Espoir Sehoun</h1>
-                <h2>Informaticien & Développeur</h2>
-                <p class="hero-text">Solutions innovantes pour vos besoins numériques</p>
-                <div class="hero-buttons">
-                    <a href="#competences" class="cta-button">Voir mes compétences</a>
-                    <a href="#contact" class="cta-button secondary">Me contacter</a>
-                </div>
-            </div>
-        </section>
-
-        
-<section id="apropos" class="section about">
-    <div class="container">
-        <h2 class="section-title">A propos</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Je suis informaticien spécialisé dans le domaine de l'informatique de gestion. Mon objectif est de trouver des solutions innovantes à vos problèmes technologiques et d'optimiser vos processus métiers grâce à des outils numériques adaptés.</p>
-                <p>Avec une solide formation technique et une passion pour l'innovation, je suis capable de concevoir, développer et maintenir des systèmes informatiques efficaces qui répondent précisément à vos besoins.</p>
-            </div>
-
-            <div class="personal-info-grid">
-                <div class="info-item">
-                    <i class="fas fa-birthday-cake"></i>
-                    <div>
-                        <h3>Date et lieu de naissance</h3>
-                        <p>07/02/2005 à Abomey</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-flag"></i>
-                    <div>
-                        <h3>Nationalité</h3>
-                        <p>Béninoise</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Adresse</h3>
-                        <p>Womey maison HOUNNOU</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-image"></i>
-                    <div>
-                        <h3>Photo de moi</h3>
-                        <a href="photo.jpg">Veuillez cliquer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-        <section id="parcours" class="section parcours">
             <div class="container">
-                <h2 class="section-title">Parcours Académique</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Juillet 2023</div>
-                        <div class="timeline-content">
-                            <h3>Baccalauréat série D</h3>
-                            <p>Collège « La Plénitude » d'Atrokpocodji</p>
+                <div class="hero-split">
+                    <!-- Photo Side -->
+                    <div class="hero-photo">
+                        <div class="photo-frame">
+                            <img src="images/espoir-photo.jpeg" alt="Espoir Sehoun - Développeur Full Stack">
+                            <div class="data-flow"></div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Juin 2020</div>
-                        <div class="timeline-content">
-                            <h3>Brévet d'Etude du Premier Cycle Moderne Court</h3>
-                            <p>Collège « La Plénitude » d'Atrokpocodji</p>
+
+                    <!-- Content Side -->
+                    <div class="hero-content">
+                        <span class="hero-tag">&lt;hello_world/&gt;</span>
+                        <h1>Espoir<br>Sehoun</h1>
+                        <span class="highlight">Développeur Full Stack</span>
+                        
+                        <p class="hero-description">
+                            Je transforme des lignes de code en solutions qui résolvent des problèmes réels. 
+                            Basé au Bénin, je crée pour le monde.
+                        </p>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Projets</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">Stage pro</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Technos</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Juin 2016</div>
-                        <div class="timeline-content">
-                            <h3>Certificat d'Etude Primaire</h3>
-                            <p>Complexe Scolaire « La Plénitude » d'Atrokpocodji</p>
+
+                        <div class="hero-buttons">
+                            <a href="#projets" class="cta-button primary">Voir mes projets</a>
+                            <a href="#contact" class="cta-button secondary">Me contacter</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ==================== À PROPOS ==================== -->
+        <section id="apropos" class="section about">
+            <div class="container">
+                <h2 class="section-title"><span>_qui_suis_je</span></h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>À 21 ans, j'ai déjà conçu plusieurs plateformes web utilisées par des professionnels. Ma passion ? Démocratiser la tech à travers des outils simples et puissants. Je ne code pas juste pour coder - je code pour impacter. Polyvalent, je maîtrise aussi bien le développement web que l'administration réseau et la maintenance informatique.</p>
+                    </div>
+
+                    <div class="personal-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <div>
+                                <h3>_naissance</h3>
+                                <p>07.02.2005</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>_localisation</h3>
+                                <p>Womey, Bénin</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-flag"></i>
+                            <div>
+                                <h3>_nationalité</h3>
+                                <p>Béninoise</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>_email</h3>
+                                <p>espoirsehoun@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPÉRIENCES PROFESSIONNELLES ==================== -->
+        <section id="experiences" class="section experiences">
+            <div class="container">
+                <h2 class="section-title"><span>_expériences</span></h2>
+                
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <i class="fas fa-building"></i>
+                            <h3>FC-ELOHYME</h3>
+                        </div>
+                        <span class="exp-badge">Stage</span>
+                        <span class="exp-date">Juin 2025 – Août 2025</span>
+                    </div>
+                    
+                    <h4 class="exp-title">Stagiaire Développeur Web</h4>
+                    <p class="exp-location"><i class="fas fa-map-pin"></i> Agla, Cotonou</p>
+                    
+                    <div class="exp-description">
+                        <p><strong>Projet :</strong> Système de gestion de biens immobiliers</p>
+                        <ul class="exp-list">
+                            <li>Conception et développement d'une application web de gestion des biens immobiliers multi-utilisateurs</li>
+                            <li>Mise en place d'un système d'authentification sécurisé avec gestion des rôles (administrateurs, propriétaires, clients)</li>
+                            <li>Développement en HTML, CSS, PHP, MySQL</li>
+                            <li>Tests, correction de bugs et documentation technique</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder pour futures expériences -->
+                <div class="experience-placeholder">
+                    <p>D'autres expériences à venir...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJETS PERSONNELS ==================== -->
+        <section id="projets" class="section projets">
+            <div class="container">
+                <h2 class="section-title"><span>_projets</span></h2>
+
+                <!-- PROJET 1 : Plateforme Immobilière (Laravel) - Image à gauche -->
+                <div class="project-block">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <img src="images/projets/immo-dashboard.png" alt="Dashboard Plateforme Immobilière" class="gallery-img" onclick="openLightbox(this)">
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="images/projets/immo-paiement.png" alt="Paiement en ligne" onclick="openLightbox(this)">
+                            <img src="images/projets/immo-messagerie.png" alt="Messagerie" onclick="openLightbox(this)">
+                            <img src="images/projets/immo-location.png" alt="Messagerie" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-header">
+                            <i class="fas fa-home project-icon"></i>
+                            <h3 class="project-title">Plateforme de Gestion Immobilière</h3>
+                            <span class="project-badge">Amélioration</span>
+                        </div>
+                        <p class="project-description">
+                            Application complète de gestion de biens immobiliers avec paiement de loyers en ligne et messagerie temps réel.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h4>Fonctionnalités clés :</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Paiement de loyers en ligne</li>
+                                <li><i class="fas fa-check"></i> Suivi des transactions et historique</li>
+                                <li><i class="fas fa-check"></i> Messagerie sécurisée temps réel</li>
+                                <li><i class="fas fa-check"></i> Dashboard Administrateur</li>
+                                <li><i class="fas fa-check"></i> Dashboard Propriétaire</li>
+                                <li><i class="fas fa-check"></i> Dashboard Client</li>
+                                <li><i class="fas fa-check"></i> Interface responsive mobile</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                            <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJET 2 : Mini ATS - Image à droite -->
+                <div class="project-block reverse">
+                    <div class="project-details">
+                        <div class="project-header">
+                            <i class="fas fa-briefcase project-icon"></i>
+                            <h3 class="project-title">Mini ATS - TrackJob</h3>
+                            <span class="project-badge">Projet perso</span>
+                        </div>
+                        <p class="project-description">
+                            Système de gestion de candidatures simplifié avec architecture MVC et dashboard admin.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h4>Fonctionnalités clés :</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Dashboard administrateur</li>
+                                <li><i class="fas fa-check"></i> Filtre de recherche avancé</li>
+                                <li><i class="fas fa-check"></i> Architecture MVC simplifiée</li>
+                                <li><i class="fas fa-check"></i> Adaptation PC / mobile</li>
+                                <li><i class="fas fa-check"></i> Gestion des offres d'emploi</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://miniats.xo.je" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                            <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                        </div>
+                    </div>
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <img src="images/projets/ats-dashboard.png" alt="Dashboard Mini ATS" class="gallery-img" onclick="openLightbox(this)">
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="images/projets/ats-listings.png" alt="Liste des offres" onclick="openLightbox(this)">
+                            <img src="images/projets/ats-connex.png" alt="Pages de connexion" onclick="openLightbox(this)">
+                            <img src="images/projets/ats-home.png" alt="Home" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJET 3 : Wiki IT - Image à gauche -->
+                <div class="project-block">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <img src="images/projets/wiki-home.png" alt="Accueil Wiki IT" class="gallery-img" onclick="openLightbox(this)">
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="images/projets/wiki-profil.png" alt="Profil admin Wiki" onclick="openLightbox(this)">
+                            <img src="images/projets/wiki-connex.png" alt="Page de connexion admin Wiki" onclick="openLightbox(this)">
+                            <img src="images/projets/wiki-home.png" alt="Home  Wiki" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-header">
+                            <i class="fas fa-book project-icon"></i>
+                            <h3 class="project-title">Wiki IT Interne</h3>
+                            <span class="project-badge">Projet perso</span>
+                        </div>
+                        <p class="project-description">
+                            Base de connaissances collaborative pour centraliser les procédures et solutions IT.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h4>Fonctionnalités clés :</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Dashboard administrateur</li>
+                                <li><i class="fas fa-check"></i> Filtre de recherche</li>
+                                <li><i class="fas fa-check"></i> Articles par catégories</li>
+                                <li><i class="fas fa-check"></i> Interface responsive</li>
+                                <li><i class="fas fa-check"></i> Gestion des utilisateurs</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://itknowledge.xo.je" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                            <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== COMPÉTENCES TECHNIQUES ==================== -->
         <section id="competences" class="section competences">
             <div class="container">
-                <h2 class="section-title">Mes Compétences</h2>
+                <h2 class="section-title"><span>_compétences</span></h2>
                 
-                <div class="skills-categories">
-                    <!-- Langues -->
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <i class="fas fa-globe category-icon"></i>
-                            <h3>Langues</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-comment-dots"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">Français</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 90%"></div>
-                                        <span>Élevé</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-comment-dots"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">Anglais</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 40%"></div>
-                                        <span>Élémentaire</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-comment-dots"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">Fon</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 85%"></div>
-                                        <span>Élevé</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Outils informatiques -->
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <i class="fas fa-laptop-code category-icon"></i>
-                            <h3>Outils informatiques</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fab fa-microsoft"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">Microsoft Word</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 75%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-file-excel"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">Microsoft Excel</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 75%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-file-powerpoint"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">PowerPoint</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 75%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Langages de programmation -->
+                <div class="skills-grid">
+                    <!-- Développement Web -->
                     <div class="skill-category">
                         <div class="category-header">
                             <i class="fas fa-code category-icon"></i>
-                            <h3>Langages de programmation</h3>
+                            <h3>Développement Web & Applications</h3>
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fab fa-python"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">Python</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 70%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
+                                <span class="skill-name">Frontend :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fab fa-html5"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">HTML5</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 70%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
+                                <span class="skill-name">Backend :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">Laravel</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fab fa-css3-alt"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">CSS3</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 75%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
+                                <span class="skill-name">Bases de données :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Oracle Database</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fab fa-js"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">JavaScript</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 60%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
+                                <span class="skill-name">Low-code / RAD :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Oracle APEX</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-database"></i>
+                                <span class="skill-name">Sécurité :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Authentification</span>
+                                    <span class="tech-tag">Gestion des rôles</span>
+                                    <span class="tech-tag">Sécurité applicative</span>
                                 </div>
-                                <div class="skill-info">
-                                    <p class="skill-name">SQL</p>
-                                    <div class="skill-level">
-                                        <div class="level-bar" style="width: 65%"></div>
-                                        <span>Intermédiaire</span>
-                                    </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Data :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Tableaux de bord</span>
+                                    <span class="tech-tag">Statistiques</span>
+                                    <span class="tech-tag">Graphiques</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Réseaux & Systèmes -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-network-wired category-icon"></i>
+                            <h3>Réseaux & Systèmes</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Administration :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Réseau (junior)</span>
+                                    <span class="tech-tag">Configuration IP</span>
+                                    <span class="tech-tag">Routage</span>
+                                    <span class="tech-tag">VLAN</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Simulation :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">GNS3</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Équipements :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Cisco (bases CCNA)</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Sécurité :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Notions sécurité réseau</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Systèmes :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Windows</span>
+                                    <span class="tech-tag">Linux</span>
+                                    <span class="tech-tag">DNS</span>
+                                    <span class="tech-tag">Hébergements</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maintenance Informatique -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools category-icon"></i>
+                            <h3>Maintenance Informatique</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Systèmes :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Installation OS</span>
+                                    <span class="tech-tag">Configuration</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Matériel :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Montage</span>
+                                    <span class="tech-tag">Maintenance</span>
+                                    <span class="tech-tag">Dépannage</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Logiciel :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Dépannage logiciel</span>
+                                    <span class="tech-tag">Gestion périphériques</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Réseau :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Mise en réseau d'ordinateurs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outils & Logiciels -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-toolbox category-icon"></i>
+                            <h3>Outils & Logiciels</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Versioning :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">GitHub</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Gestion :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Trello</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Bureautique :</span>
+                                <div class="skill-tags">
+                                    <span class="tech-tag">Word</span>
+                                    <span class="tech-tag">Excel</span>
+                                    <span class="tech-tag">PowerPoint</span>
                                 </div>
                             </div>
                         </div>
@@ -290,52 +494,107 @@
             </div>
         </section>
 
-        <section class="section loisirs">
+        <!-- ==================== PARCOURS ACADÉMIQUE ==================== -->
+        <section id="parcours" class="section parcours">
             <div class="container">
-                <h2 class="section-title">Loisirs</h2>
-                <div class="hobbies-grid">
-                    <div class="hobby-item">
-                        <i class="fas fa-gamepad hobby-icon"></i>
-                        <h3>Jeux vidéo</h3>
-                        <p>Passionné par les jeux vidéo et les nouvelles technologies du gaming</p>
+                <h2 class="section-title"><span>_parcours</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024-2025</div>
+                        <h3>License 2</h3>
+                        <p>ENEAM de Gbégamey</p>
                     </div>
-                    <div class="hobby-item">
-                        <i class="fas fa-running hobby-icon"></i>
-                        <h3>Sports</h3>
-                        <p>Football, basket, tennis - Pratique régulière et suivi des compétitions</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023-2024</div>
+                        <h3>License 1</h3>
+                        <p>ENEAM de Gbégamey</p>
                     </div>
-                    <div class="hobby-item">
-                        <i class="fas fa-music hobby-icon"></i>
-                        <h3>Musique</h3>
-                        <p>Amateur de musique moderne et des nouvelles tendances musicales</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <h3>Baccalauréat série D</h3>
+                        <p>Collège « La Plénitude » d'Atrokpocodji</p>
                     </div>
-                    <div class="hobby-item">
-                        <i class="fas fa-film hobby-icon"></i>
-                        <h3>Mangas/Animes</h3>
-                        <p>Passionné par les mangas, animés japonaise et coréenne</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <h3>BEPC Moderne Court</h3>
+                        <p>Collège « La Plénitude » d'Atrokpocodji</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016</div>
+                        <h3>Certificat d'Étude Primaire</h3>
+                        <p>Complexe Scolaire « La Plénitude » d'Atrokpocodji</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ==================== COMPÉTENCES COMPLÉMENTAIRES ==================== -->
+        <section class="section complementary">
+            <div class="container">
+                <h2 class="section-title"><span>_entrepreneuriat</span></h2>
+                <div class="complementary-card">
+                    <div class="complementary-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="complementary-content">
+                        <h3>Importation & Vente de produits</h3>
+                        <p>Activité entrepreneuriale dans l'importation et la vente de divers produits :</p>
+                        <div class="complementary-tags">
+                            <span class="complementary-tag"><i class="fas fa-mobile-alt"></i> Coques de téléphones</span>
+                            <span class="complementary-tag"><i class="fas fa-clock"></i> Montres</span>
+                            <span class="complementary-tag"><i class="fas fa-box"></i> Accessoires divers</span>
+                        </div>
+                        <ul class="complementary-list">
+                            <li><i class="fas fa-check-circle"></i> Gestion de stock et approvisionnement</li>
+                            <li><i class="fas fa-check-circle"></i> Relation client et service après-vente</li>
+                            <li><i class="fas fa-check-circle"></i> Commerce en ligne et négociation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section-title">Contactez-moi</h2>
+                <h2 class="section-title"><span>_contact</span></h2>
                 <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Disponible pour des opportunités</h3>
-                        <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités de collaboration.</p>
+                    <!-- NOUVEAU : formulaire avec action Formspree -->
+                    <form class="contact-form" action="https://formspree.io/f/xnjbyblq" method="POST">
                         
-                        <div class="contact-items">
-                            <a href="mailto:espoirsehoun@gmail.com" class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>espoirsehoun@gmail.com</span>
-                            </a>
-                            <a href="https://wa.me/+22946151511" class="contact-item">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>+229 46 15 15 11</span>
-                            </a>
+                        <!-- Champ caché pour personnaliser l'objet de l'email -->
+                        <input type="hidden" name="_subject" value="📬 Nouveau message depuis votre portfolio ESPOH">
+                        
+                        <!-- Champ caché pour rediriger vers une page de confirmation (optionnel) -->
+                        <input type="hidden" name="_next" value="https://espoir147.github.io/cv/merci.html">
+                        
+                        <div class="form-group">
+                            <label for="name">_nom</label>
+                            <input type="text" id="name" name="nom" required>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="email">_email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">_message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <!-- Protection anti-spam de base (incluse automatiquement par Formspree) -->
+                        
+                        <button type="submit" class="submit-btn">envoyer_message();</button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:espoirsehoun@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i> espoirsehoun@gmail.com
+                        </a>
+                        <a href="https://wa.me/22946151511" class="contact-item">
+                            <i class="fab fa-whatsapp"></i> +229 46 15 15 11
+                        </a>
                     </div>
                 </div>
             </div>
@@ -343,37 +602,47 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>Espoir Sehoun</h3>
-                <p>Informaticien spécialisé en solutions numériques et développement.</p>
-            </div>
-            
-            <div class="footer-links">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">A propos</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>ESPOH</h3>
+                    <p>Développeur Full Stack créant des solutions digitales innovantes.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>_navigation</h3>
+                    <ul>
+                        <li><a href="#accueil">_accueil</a></li>
+                        <li><a href="#apropos">_apropos</a></li>
+                        <li><a href="#experiences">_expériences</a></li>
+                        <li><a href="#projets">_projets</a></li>
+                        <li><a href="#competences">_compétences</a></li>
+                        <li><a href="#contact">_contact</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-social">
-                <h3>Réseaux sociaux</h3>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <div class="footer-social">
+                    <h3>_social</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/espoir147" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/espoir-sehoun-55021a36b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/takagi147" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/espoir_sehoun" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Espoir Sehoun. Tous droits réservés.</p>
+            
+            <div class="footer-bottom">
+                <p>© 2026 ESPOH - Tous droits réservés</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Lightbox pour les images -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="script_modifie.js"></script>
 </body>
