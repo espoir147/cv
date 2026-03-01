@@ -2,103 +2,95 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
-    const navLinksItems = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
-        // Toggle nav
         navLinks.classList.toggle('active');
-        
-        // Burger animation
         burger.classList.toggle('toggle');
     });
 
     // Close mobile menu when clicking a link
-    navLinksItems.forEach(item => {
-        item.addEventListener('click', () => {
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             burger.classList.remove('toggle');
         });
     });
 
-    // Smooth scrolling for anchor links
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
     });
 
-    // Scroll reveal animation for timeline items
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    
-    function checkScroll() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-        
-        timelineItems.forEach(item => {
-            const itemTop = item.getBoundingClientRect().top;
-            
-            if (itemTop < triggerBottom) {
-                item.classList.add('visible');
+    // Scroll reveal animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-    }
-    
-    // Initial check
-    checkScroll();
-    
-    // Check on scroll
-    window.addEventListener('scroll', checkScroll);
+    }, observerOptions);
 
-    // Add animation to skill items on hover
-    const skillItems = document.querySelectorAll('.skill-item');
-    
-    skillItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const icon = item.querySelector('.skill-icon');
-            icon.style.transform = 'rotate(15deg) scale(1.1)';
-        });
-        
-        item.addEventListener('mouseleave', () => {
-            const icon = item.querySelector('.skill-icon');
-            icon.style.transform = 'rotate(0) scale(1)';
-        });
+    document.querySelectorAll('.section, .project-card, .skill-category, .timeline-item, .hobby-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
     });
 
-    // Add animation to sections when they come into view
-    const sections = document.querySelectorAll('.section');
-    
-    function animateSections() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-        
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
+    /* Form handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.submit-btn');
+            const originalText = btn.textContent;
             
-            if (sectionTop < triggerBottom) {
-                section.style.opacity = '1';
-                section.style.transform = 'translateY(0)';
-            }
+            btn.textContent = 'envoi_en_cours...';
+            btn.disabled = true;
+            
+            // Simuler l'envoi
+            setTimeout(() => {
+                alert('Message envoyé avec succès !');
+                this.reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1500);
         });
-    }
-    
-    // Set initial state
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(50px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-    
-    // Initial check
-    animateSections();
-    
-    // Check on scroll
-    window.addEventListener('scroll', animateSections);
+    }*/
 });
+// Lightbox pour les images
+    function openLightbox(img) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Fermer avec la touche Echap
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
