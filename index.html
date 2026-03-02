@@ -630,5 +630,11 @@
     </div>
 
     <script src="script_modifie.js"></script>
+    <script>
+        // Vérifier que la page est bien chargée depuis Formspree
+        if (document.referrer.includes('formspree')) {
+            console.log('Bienvenue depuis Formspree !');
+        }
+    </script>
 </body>
 </html>
