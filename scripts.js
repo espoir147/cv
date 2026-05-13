@@ -104,3 +104,32 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
         document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
 });
+
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('.submit-btn');
+        btn.textContent = 'envoi_en_cours...';
+        btn.disabled = true;
+
+        const data = new FormData(this);
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                window.location.href = 'merci.html';
+            } else {
+                btn.textContent = 'erreur, réessayer';
+                btn.disabled = false;
+            }
+        } catch {
+            btn.textContent = 'erreur, réessayer';
+            btn.disabled = false;
+        }
+    });
+}
