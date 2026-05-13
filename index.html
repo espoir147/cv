@@ -7,7 +7,7 @@
     <meta name="description" content="Portfolio d'Espoir Sehoun - Développeur Full Stack spécialisé en Laravel, PHP et solutions digitales.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles_modifie.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
@@ -55,7 +55,7 @@
 
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <span class="stat-number">3+</span>
+                                <span class="stat-number">4+</span>
                                 <span class="stat-label">Projets</span>
                             </div>
                             <div class="stat-item">
@@ -163,157 +163,310 @@
             </div>
         </section>
 
-        <!-- ==================== PROJETS PERSONNELS ==================== -->
+        <!-- ==================== PROJETS ==================== -->
         <section id="projets" class="section projets">
             <div class="container">
                 <h2 class="section-title"><span>_Projets</span></h2>
 
-                <!-- PROJET 1 : Plateforme Immobilière (Laravel) - Image à gauche -->
-                <div class="project-block">
-                    <div class="project-gallery">
-                        <div class="gallery-main">
-                            <img src="immo-dashboard.png" alt="Dashboard Plateforme Immobilière" class="gallery-img" onclick="openLightbox(this)">
-                        </div>
-                        <div class="gallery-thumbnails">
-                            <img src="immo-paiement.png" alt="Paiement en ligne" onclick="openLightbox(this)">
-                            <img src="immo-messagerie.png" alt="Messagerie" onclick="openLightbox(this)">
-                            <img src="immo-location.png" alt="Messagerie" onclick="openLightbox(this)">
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-header">
-                            <i class="fas fa-home project-icon"></i>
-                            <h3 class="project-title">Plateforme de Gestion Immobilière</h3>
-                            <span class="project-badge">Amélioration</span>
-                        </div>
-                        <p class="project-description">
-                            Application complète de gestion de biens immobiliers avec paiement de loyers en ligne et messagerie temps réel.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h4>Fonctionnalités clés :</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Paiement de loyers en ligne</li>
-                                <li><i class="fas fa-check"></i> Suivi des transactions et historique</li>
-                                <li><i class="fas fa-check"></i> Messagerie sécurisée temps réel</li>
-                                <li><i class="fas fa-check"></i> Dashboard Administrateur</li>
-                                <li><i class="fas fa-check"></i> Dashboard Propriétaire</li>
-                                <li><i class="fas fa-check"></i> Dashboard Client</li>
-                                <li><i class="fas fa-check"></i> Interface responsive mobile</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="#" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
-                            <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
-                        </div>
-                    </div>
+                <!-- Onglets -->
+                <div class="projects-tabs">
+                    <button class="tab-btn active" data-tab="web">
+                        <i class="fas fa-code"></i> Web
+                    </button>
+                    <button class="tab-btn" data-tab="reseau">
+                        <i class="fas fa-network-wired"></i> Réseau
+                    </button>
                 </div>
 
-                <!-- PROJET 2 : Mini ATS - Image à droite -->
-                <div class="project-block reverse">
-                    <div class="project-details">
-                        <div class="project-header">
-                            <i class="fas fa-briefcase project-icon"></i>
-                            <h3 class="project-title">Mini ATS - TrackJob</h3>
-                            <span class="project-badge">Projet perso</span>
-                        </div>
-                        <p class="project-description">
-                            Système de gestion de candidatures simplifié avec architecture MVC et dashboard admin.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h4>Fonctionnalités clés :</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Dashboard administrateur</li>
-                                <li><i class="fas fa-check"></i> Filtre de recherche avancé</li>
-                                <li><i class="fas fa-check"></i> Architecture MVC simplifiée</li>
-                                <li><i class="fas fa-check"></i> Adaptation PC / mobile</li>
-                                <li><i class="fas fa-check"></i> Gestion des offres d'emploi</li>
-                            </ul>
-                        </div>
+                <!-- ==================== ONGLET WEB ==================== -->
+                <div class="tab-content active" id="tab-web">
 
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
+                    <!-- PROJET 0 : GestionNotes -->
+                    <div class="project-block">
+                        <div class="project-gallery">
+                            <div class="gallery-main">
+                                <img src="gestion-home.png" alt="Landing GestionNotes" class="gallery-img" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="gestion-admin.png" alt="Dashboard Administrateur" onclick="openLightbox(this)">
+                                <img src="gestion-prof.png" alt="Dashboard Professeur" onclick="openLightbox(this)">
+                                <img src="gestion-eleve.png" alt="Dashboard Élève" onclick="openLightbox(this)">
+                            </div>
                         </div>
+                        <div class="project-details">
+                            <div class="project-header">
+                                <i class="fas fa-graduation-cap project-icon"></i>
+                                <h3 class="project-title">GestionNotes</h3>
+                                <span class="project-badge">Projet perso</span>
+                            </div>
+                            <p class="project-description">
+                                Application web full-stack de gestion scolaire complète avec trois espaces distincts — administrateur, professeur et élève — bulletins PDF automatiques et système de réclamations.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Fonctionnalités clés :</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 3 rôles : Admin, Professeur, Élève</li>
+                                    <li><i class="fas fa-check"></i> Saisie et calcul automatique des notes</li>
+                                    <li><i class="fas fa-check"></i> Génération de bulletins PDF</li>
+                                    <li><i class="fas fa-check"></i> Système de réclamations complet</li>
+                                    <li><i class="fas fa-check"></i> Import Excel des utilisateurs</li>
+                                    <li><i class="fas fa-check"></i> Archivage des années scolaires</li>
+                                    <li><i class="fas fa-check"></i> API REST + Auth Sanctum</li>
+                                </ul>
+                            </div>
 
-                        <div class="project-links">
-                            <a href="https://miniats.xo.je" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
-                            <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                            <div class="project-tech">
+                                <span class="tech-tag">Laravel 12</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">DaisyUI</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">DomPDF</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="#" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                                <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-gallery">
-                        <div class="gallery-main">
-                            <img src="ats-dashboard.png" alt="Dashboard Mini ATS" class="gallery-img" onclick="openLightbox(this)">
+
+                    <!-- PROJET 1 : Plateforme Immobilière (Laravel) -->
+                    <div class="project-block reverse">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <i class="fas fa-home project-icon"></i>
+                                <h3 class="project-title">Plateforme de Gestion Immobilière</h3>
+                                <span class="project-badge">Amélioration</span>
+                            </div>
+                            <p class="project-description">
+                                Application complète de gestion de biens immobiliers avec paiement de loyers en ligne et messagerie temps réel.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Fonctionnalités clés :</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Paiement de loyers en ligne</li>
+                                    <li><i class="fas fa-check"></i> Suivi des transactions et historique</li>
+                                    <li><i class="fas fa-check"></i> Messagerie sécurisée temps réel</li>
+                                    <li><i class="fas fa-check"></i> Dashboard Administrateur</li>
+                                    <li><i class="fas fa-check"></i> Dashboard Propriétaire</li>
+                                    <li><i class="fas fa-check"></i> Dashboard Client</li>
+                                    <li><i class="fas fa-check"></i> Interface responsive mobile</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="#" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                                <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                            </div>
                         </div>
-                        <div class="gallery-thumbnails">
-                            <img src="ats-listings.png" alt="Liste des offres" onclick="openLightbox(this)">
-                            <img src="ats-connex.png" alt="Pages de connexion" onclick="openLightbox(this)">
-                            <img src="ats-home.png" alt="Home" onclick="openLightbox(this)">
+                        <div class="project-gallery">
+                            <div class="gallery-main">
+                                <img src="immo-dashboard.png" alt="Dashboard Plateforme Immobilière" class="gallery-img" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="immo-paiement.png" alt="Paiement en ligne" onclick="openLightbox(this)">
+                                <img src="immo-messagerie.png" alt="Messagerie" onclick="openLightbox(this)">
+                                <img src="immo-location.png" alt="Location" onclick="openLightbox(this)">
+                            </div>
                         </div>
                     </div>
+
+                    <!-- PROJET 2 : Mini ATS -->
+                    <div class="project-block">
+                        <div class="project-gallery">
+                            <div class="gallery-main">
+                                <img src="ats-dashboard.png" alt="Dashboard Mini ATS" class="gallery-img" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="ats-listings.png" alt="Liste des offres" onclick="openLightbox(this)">
+                                <img src="ats-connex.png" alt="Pages de connexion" onclick="openLightbox(this)">
+                                <img src="ats-home.png" alt="Home" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-header">
+                                <i class="fas fa-briefcase project-icon"></i>
+                                <h3 class="project-title">Mini ATS - TrackJob</h3>
+                                <span class="project-badge">Projet perso</span>
+                            </div>
+                            <p class="project-description">
+                                Système de gestion de candidatures simplifié avec architecture MVC et dashboard admin.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Fonctionnalités clés :</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Dashboard administrateur</li>
+                                    <li><i class="fas fa-check"></i> Filtre de recherche avancé</li>
+                                    <li><i class="fas fa-check"></i> Architecture MVC simplifiée</li>
+                                    <li><i class="fas fa-check"></i> Adaptation PC / mobile</li>
+                                    <li><i class="fas fa-check"></i> Gestion des offres d'emploi</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://miniats.xo.je" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                                <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJET 3 : Wiki IT -->
+                    <div class="project-block reverse">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <i class="fas fa-book project-icon"></i>
+                                <h3 class="project-title">Wiki IT Interne</h3>
+                                <span class="project-badge">Projet perso</span>
+                            </div>
+                            <p class="project-description">
+                                Base de connaissances collaborative pour centraliser les procédures et solutions IT.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Fonctionnalités clés :</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Dashboard administrateur</li>
+                                    <li><i class="fas fa-check"></i> Filtre de recherche</li>
+                                    <li><i class="fas fa-check"></i> Articles par catégories</li>
+                                    <li><i class="fas fa-check"></i> Interface responsive</li>
+                                    <li><i class="fas fa-check"></i> Gestion des utilisateurs</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://itknowledge.xo.je" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+                                <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                            </div>
+                        </div>
+                        <div class="project-gallery">
+                            <div class="gallery-main">
+                                <img src="wiki-home.png" alt="Accueil Wiki IT" class="gallery-img" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="wiki-profil.png" alt="Profil admin Wiki" onclick="openLightbox(this)">
+                                <img src="wiki-connex.png" alt="Page de connexion admin Wiki" onclick="openLightbox(this)">
+                                <img src="wiki-home.png" alt="Home Wiki" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- ==================== FIN ONGLET WEB ==================== -->
 
-                <!-- PROJET 3 : Wiki IT - Image à gauche -->
-                <div class="project-block">
-                    <div class="project-gallery">
-                        <div class="gallery-main">
-                            <img src="wiki-home.png" alt="Accueil Wiki IT" class="gallery-img" onclick="openLightbox(this)">
+                <!-- ==================== ONGLET RÉSEAU ==================== -->
+                <div class="tab-content" id="tab-reseau">
+
+                    <!-- PROJET RÉSEAU 1 : EcoTech Africa -->
+                    <div class="network-card">
+                        <div class="network-img">
+                            <img src="reseau1.png" alt="EcoTech Africa" onclick="openLightbox(this)">
+                            <span class="network-zoom"><i class="fas fa-search-plus"></i></span>
                         </div>
-                        <div class="gallery-thumbnails">
-                            <img src="wiki-profil.png" alt="Profil admin Wiki" onclick="openLightbox(this)">
-                            <img src="wiki-connex.png" alt="Page de connexion admin Wiki" onclick="openLightbox(this)">
-                            <img src="wiki-home.png" alt="Home  Wiki" onclick="openLightbox(this)">
+                        <div class="network-details">
+                            <div class="project-header">
+                                <i class="fas fa-sitemap project-icon"></i>
+                                <h3 class="project-title">EcoTech Africa — Réseau Multi-Sites</h3>
+                                <span class="project-badge">Exercice pratique</span>
+                            </div>
+                            <p class="project-description">
+                                Conception et configuration d'un réseau d'entreprise interconnectant 3 sites (Cotonou, Porto-Novo, Parakou) avec centralisation des services au siège.
+                            </p>
+                            <div class="project-features">
+                                <h4>Compétences démontrées :</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Plan d'adressage VLSM</li>
+                                    <li><i class="fas fa-check"></i> WAN PPP + authentification CHAP</li>
+                                    <li><i class="fas fa-check"></i> Routage dynamique OSPF</li>
+                                    <li><i class="fas fa-check"></i> VLAN 10 / 20 + inter-VLAN</li>
+                                    <li><i class="fas fa-check"></i> Services DHCP, DNS, Web centralisés</li>
+                                    <li><i class="fas fa-check"></i> NAT pour accès Internet multi-sites</li>
+                                    <li><i class="fas fa-check"></i> Administration distante SSH/Telnet</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Cisco Packet Tracer</span>
+                                <span class="tech-tag">OSPF</span>
+                                <span class="tech-tag">VLAN</span>
+                                <span class="tech-tag">NAT</span>
+                                <span class="tech-tag">PPP/CHAP</span>
+                                <span class="tech-tag">DHCP</span>
+                                <span class="tech-tag">SSH</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <div class="project-header">
-                            <i class="fas fa-book project-icon"></i>
-                            <h3 class="project-title">Wiki IT Interne</h3>
-                            <span class="project-badge">Projet perso</span>
-                        </div>
-                        <p class="project-description">
-                            Base de connaissances collaborative pour centraliser les procédures et solutions IT.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h4>Fonctionnalités clés :</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Dashboard administrateur</li>
-                                <li><i class="fas fa-check"></i> Filtre de recherche</li>
-                                <li><i class="fas fa-check"></i> Articles par catégories</li>
-                                <li><i class="fas fa-check"></i> Interface responsive</li>
-                                <li><i class="fas fa-check"></i> Gestion des utilisateurs</li>
-                            </ul>
-                        </div>
 
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
+                    <!-- PROJET RÉSEAU 2 : Infrastructure Multisite Avancée -->
+                    <div class="network-card">
+                        <div class="network-img">
+                            <img src="reseau2.png" alt="Infrastructure Multisite Avancée" onclick="openLightbox(this)">
+                            <span class="network-zoom"><i class="fas fa-search-plus"></i></span>
                         </div>
-
-                        <div class="project-links">
-                            <a href="https://itknowledge.xo.je" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
-                            <a href="#" class="project-link code"><i class="fab fa-github"></i> Code source</a>
+                        <div class="network-details">
+                            <div class="project-header">
+                                <i class="fas fa-server project-icon"></i>
+                                <h3 class="project-title">Infrastructure Multisite Avancée</h3>
+                                <span class="project-badge">Exercice pratique</span>
+                            </div>
+                            <p class="project-description">
+                                Architecture réseau complète avec siège, agence distante, zone serveur et poste d'administration distant. Plan d'adressage sur 172.20.0.0/16 avec VLSM optimisé.
+                            </p>
+                            <div class="project-features">
+                                <h4>Compétences démontrées :</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> VLSM sur 172.20.0.0/16</li>
+                                    <li><i class="fas fa-check"></i> DNS, DHCP, Web, FTP, Mail, Syslog</li>
+                                    <li><i class="fas fa-check"></i> Serveur NTP + synchronisation globale</li>
+                                    <li><i class="fas fa-check"></i> AAA / Authentification centralisée</li>
+                                    <li><i class="fas fa-check"></i> Mise à jour IOS via TFTP</li>
+                                    <li><i class="fas fa-check"></i> Administration SSH distante</li>
+                                    <li><i class="fas fa-check"></i> Sécurité : bannière, logs, port security</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Cisco Packet Tracer</span>
+                                <span class="tech-tag">VLSM</span>
+                                <span class="tech-tag">NTP</span>
+                                <span class="tech-tag">AAA</span>
+                                <span class="tech-tag">TFTP</span>
+                                <span class="tech-tag">Syslog</span>
+                                <span class="tech-tag">SSH</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+                <!-- ==================== FIN ONGLET RÉSEAU ==================== -->
+
             </div>
         </section>
 
@@ -336,6 +489,8 @@
                                     <span class="tech-tag">HTML5</span>
                                     <span class="tech-tag">CSS3</span>
                                     <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -391,12 +546,14 @@
                                     <span class="tech-tag">Configuration IP</span>
                                     <span class="tech-tag">Routage</span>
                                     <span class="tech-tag">VLAN</span>
+                                    <span class="tech-tag">Nat</span>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Simulation :</span>
                                 <div class="skill-tags">
                                     <span class="tech-tag">GNS3</span>
+                                    <span class="tech-tag">Cisco Packet Tracer</span>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -409,6 +566,7 @@
                                 <span class="skill-name">Sécurité :</span>
                                 <div class="skill-tags">
                                     <span class="tech-tag">Notions sécurité réseau</span>
+                                    <span class="tech-tag">Firewall</span>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -418,6 +576,7 @@
                                     <span class="tech-tag">Linux</span>
                                     <span class="tech-tag">DNS</span>
                                     <span class="tech-tag">Hébergements</span>
+                                    <span class="tech-tag">Windows Serveur</span>
                                 </div>
                             </div>
                         </div>
@@ -501,7 +660,7 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">2025-2026</div>
-                        <h3>License </h3>
+                        <h3>Licence</h3>
                         <p>ENEAM de Gbégamey</p>
                     </div>
                     <div class="timeline-item">
@@ -513,7 +672,7 @@
             </div>
         </section>
 
-        <!-- ==================== COMPÉTENCES COMPLÉMENTAIRES ==================== -->
+        <!-- ==================== ENTREPRENEURIAT ==================== -->
         <section class="section complementary">
             <div class="container">
                 <h2 class="section-title"><span>_Entrepreneuriat</span></h2>
@@ -544,14 +703,9 @@
             <div class="container">
                 <h2 class="section-title"><span>_Contact</span></h2>
                 <div class="contact-container">
-                    <!-- NOUVEAU : formulaire avec action Formspree -->
                     <form class="contact-form" action="https://formspree.io/f/xnjbyblq" method="POST">
-                        
-                        <!-- Champ caché pour personnaliser l'objet de l'email -->
                         <input type="hidden" name="_subject" value="📬 Nouveau message depuis votre portfolio ESPOH">
-                        
-                        <!-- Champ caché pour rediriger vers une page de confirmation (optionnel) -->
-                        <input type="hidden" name="_after" value="https://espoir147.github.io/cv/merci.html">
+                        <input type="hidden" name="_next" value="https://espoir147.github.io/cv/merci.html">
                         
                         <div class="form-group">
                             <label for="name">_Nom</label>
@@ -567,8 +721,6 @@
                             <label for="message">_Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        
-                        <!-- Protection anti-spam de base (incluse automatiquement par Formspree) -->
                         
                         <button type="submit" class="submit-btn">envoyer_message();</button>
                     </form>
@@ -591,7 +743,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>ESPOH</h3>
-                    <p>Développeur Full Stack créant des solutions digitales innovantes.</p>
+                    <p>Administrateur Réseau junior | Développeur Full Stack créant des solutions digitales innovantes.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -629,9 +781,8 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <script src="script_modifie.js"></script>
+    <script src="scripts.js"></script>
     <script>
-        // Vérifier que la page est bien chargée depuis Formspree
         if (document.referrer.includes('formspree')) {
             console.log('Bienvenue depuis Formspree !');
         }
