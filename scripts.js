@@ -8,6 +8,7 @@ const translations = {
         nav_skills: "_Compétences",
         nav_contact: "_Contact",
 
+        hero_status: "DISPONIBLE",
         hero_title: "Développeur Full Stack | Administrateur Réseau et Système",
         hero_desc: "Je transforme des lignes de code en solutions qui résolvent des problèmes réels. Basé au Bénin, je crée pour le monde.",
         stat_projects: "Projets",
@@ -16,8 +17,10 @@ const translations = {
         btn_projects: "Voir mes projets",
         btn_contact: "Me contacter",
 
-        about_title: "_Qui_suis_je",
+        eyebrow_about: "// qui_suis_je",
+        about_title2: "À propos",
         about_text: "À 21 ans, j'ai déjà conçu plusieurs plateformes web utilisées par des professionnels. Ma passion ? Démocratiser la tech à travers des outils simples et puissants. Je ne code pas juste pour coder - je code pour impacter. Polyvalent, je maîtrise aussi bien le développement web que l'administration réseau et la maintenance informatique.",
+        about_cmd2: "langues --list",
         info_birth: "_naissance",
         info_location: "_localisation",
         info_nationality: "_nationalité",
@@ -26,7 +29,8 @@ const translations = {
         lang_good: "Bien",
         lang_very_good2: "Très bien",
 
-        exp_title: "_Expériences",
+        eyebrow_exp: "// journal_de_bord",
+        exp_title2: "Expériences",
         exp_badge: "Stage",
         exp_role: "Stagiaire Développeur Web",
         exp_project_label: "Projet :",
@@ -45,7 +49,8 @@ const translations = {
         exp2_task3: "Visualisation de la topologie réseau en temps réel avec D3.js (force-directed graph)",
         exp2_task4: "Sécurisation des identifiants SSH par chiffrement Fernet et correction de bugs (scoping CIDR, historique Git fragmenté, erreurs de threading SQLAlchemy, faille XSS)",
 
-        projects_title: "_Projets",
+        eyebrow_projects: "// build_log",
+        projects_title2: "Projets",
         tab_network: "Réseau",
         badge_personal: "Projet perso",
         badge_improvement: "Amélioration",
@@ -116,23 +121,24 @@ const translations = {
         infra_f6: "Administration SSH distante",
         infra_f7: "Sécurité : bannière, logs, port security",
 
-        skills_title: "_Compétences",
+        eyebrow_skills: "// stack.json",
+        skills_title2: "Compétences",
         skills_web: "Développement Web & Applications",
         skills_network: "Réseaux & Systèmes",
         skills_maintenance: "Maintenance Informatique",
         skills_tools: "Outils & Logiciels",
-        skill_db: "Bases de données :",
-        skill_security: "Sécurité :",
-        skill_admin: "Administration :",
-        skill_simulation: "Simulation :",
-        skill_equipment: "Équipements :",
-        skill_systems: "Systèmes :",
-        skill_hardware: "Matériel :",
-        skill_software: "Logiciel :",
-        skill_network_label: "Réseau :",
-        skill_versioning: "Versioning :",
-        skill_management: "Gestion :",
-        skill_office: "Bureautique :",
+        skill_db: "Bases de données",
+        skill_security: "Sécurité",
+        skill_admin: "Administration",
+        skill_simulation: "Simulation",
+        skill_equipment: "Équipements",
+        skill_systems: "Systèmes",
+        skill_hardware: "Matériel",
+        skill_software: "Logiciel",
+        skill_network_label: "Réseau",
+        skill_versioning: "Versioning",
+        skill_management: "Gestion",
+        skill_office: "Bureautique",
         sk_auth: "Authentification",
         sk_roles: "Gestion des rôles",
         sk_appsec: "Sécurité applicative",
@@ -154,7 +160,8 @@ const translations = {
         sk_periph: "Gestion périphériques",
         sk_networking: "Mise en réseau d'ordinateurs",
 
-        parcours_title: "_Parcours",
+        eyebrow_parcours: "// traceroute --edu",
+        parcours_title2: "Parcours",
         parcours_1_title: "Licence 3 — Administration des Réseaux Informatiques",
         parcours_1_school: "ENEAM de Gbégamey, Cotonou",
         parcours_2_title: "Licence 2 — Informatique de Gestion",
@@ -164,7 +171,8 @@ const translations = {
         parcours_4_title: "Baccalauréat Scientifique — Série D",
         parcours_4_school: "Collège « La Plénitude » d'Atrokpocodji — Mention Assez Bien",
 
-        entrepr_title: "_Entrepreneuriat",
+        eyebrow_entrepr: "// side_hustle",
+        entrepr_title2: "Entrepreneuriat",
         entrepr_heading: "Importation & Vente de produits",
         entrepr_desc: "Activité entrepreneuriale dans l'importation et la vente de divers produits :",
         entrepr_prod1: "Coques de téléphones",
@@ -174,7 +182,10 @@ const translations = {
         entrepr_task2: "Relation client et service après-vente",
         entrepr_task3: "Commerce en ligne et négociation",
 
-        contact_title: "_Contact",
+        eyebrow_contact: "// uplink",
+        contact_title2: "Contact",
+        contact_side_title: "Parlons-en",
+        contact_side_text: "Une idée, un projet, une opportunité ? Écris-moi, je réponds sous 24 à 48h.",
         form_name: "_Nom",
         form_message: "_Message",
         form_submit: "envoyer_message();",
@@ -192,6 +203,7 @@ const translations = {
         nav_skills: "_Skills",
         nav_contact: "_Contact",
 
+        hero_status: "AVAILABLE",
         hero_title: "Full Stack Developer | Network & System Administrator",
         hero_desc: "I turn lines of code into solutions that solve real problems. Based in Benin, building for the world.",
         stat_projects: "Projects",
@@ -200,8 +212,10 @@ const translations = {
         btn_projects: "View my projects",
         btn_contact: "Contact me",
 
-        about_title: "_Who_am_I",
+        eyebrow_about: "// who_am_i",
+        about_title2: "About",
         about_text: "At 21, I have already built several web platforms used by professionals. My passion? Making tech accessible through simple yet powerful tools. I don't code just to code — I code to make an impact. Versatile, I master both web development and network administration.",
+        about_cmd2: "lang --list",
         info_birth: "_born",
         info_location: "_location",
         info_nationality: "_nationality",
@@ -210,7 +224,8 @@ const translations = {
         lang_good: "Good",
         lang_very_good2: "Very good",
 
-        exp_title: "_Experience",
+        eyebrow_exp: "// work_log",
+        exp_title2: "Experience",
         exp_badge: "Internship",
         exp_role: "Web Developer Intern",
         exp_project_label: "Project:",
@@ -229,7 +244,8 @@ const translations = {
         exp2_task3: "Real-time network topology visualization with D3.js (force-directed graph)",
         exp2_task4: "Secured SSH credentials with Fernet encryption and fixed bugs (CIDR scoping, fragmented Git history, SQLAlchemy threading errors, XSS vulnerability)",
 
-        projects_title: "_Projects",
+        eyebrow_projects: "// build_log",
+        projects_title2: "Projects",
         tab_network: "Network",
         badge_personal: "Personal project",
         badge_improvement: "Improvement",
@@ -300,23 +316,24 @@ const translations = {
         infra_f6: "Remote SSH administration",
         infra_f7: "Security: banner, logs, port security",
 
-        skills_title: "_Skills",
+        eyebrow_skills: "// stack.json",
+        skills_title2: "Skills",
         skills_web: "Web Development & Applications",
         skills_network: "Networks & Systems",
         skills_maintenance: "IT Maintenance",
         skills_tools: "Tools & Software",
-        skill_db: "Databases:",
-        skill_security: "Security:",
-        skill_admin: "Administration:",
-        skill_simulation: "Simulation:",
-        skill_equipment: "Equipment:",
-        skill_systems: "Systems:",
-        skill_hardware: "Hardware:",
-        skill_software: "Software:",
-        skill_network_label: "Network:",
-        skill_versioning: "Versioning:",
-        skill_management: "Management:",
-        skill_office: "Office tools:",
+        skill_db: "Databases",
+        skill_security: "Security",
+        skill_admin: "Administration",
+        skill_simulation: "Simulation",
+        skill_equipment: "Equipment",
+        skill_systems: "Systems",
+        skill_hardware: "Hardware",
+        skill_software: "Software",
+        skill_network_label: "Network",
+        skill_versioning: "Versioning",
+        skill_management: "Management",
+        skill_office: "Office tools",
         sk_auth: "Authentication",
         sk_roles: "Role management",
         sk_appsec: "Application security",
@@ -338,7 +355,8 @@ const translations = {
         sk_periph: "Peripheral management",
         sk_networking: "Computer networking",
 
-        parcours_title: "_Education",
+        eyebrow_parcours: "// traceroute --edu",
+        parcours_title2: "Education",
         parcours_1_title: "Bachelor's 3 — Computer Network Administration",
         parcours_1_school: "ENEAM de Gbégamey, Cotonou",
         parcours_2_title: "Bachelor's 2 — Management Information Systems",
@@ -348,7 +366,8 @@ const translations = {
         parcours_4_title: "Scientific Baccalaureate — Series D",
         parcours_4_school: "Collège « La Plénitude » d'Atrokpocodji — With Merit",
 
-        entrepr_title: "_Entrepreneurship",
+        eyebrow_entrepr: "// side_hustle",
+        entrepr_title2: "Entrepreneurship",
         entrepr_heading: "Import & Product Sales",
         entrepr_desc: "Entrepreneurial activity in importing and selling various products:",
         entrepr_prod1: "Phone cases",
@@ -358,7 +377,10 @@ const translations = {
         entrepr_task2: "Customer relations and after-sales service",
         entrepr_task3: "Online commerce and negotiation",
 
-        contact_title: "_Contact",
+        eyebrow_contact: "// uplink",
+        contact_title2: "Contact",
+        contact_side_title: "Let's talk",
+        contact_side_text: "An idea, a project, an opportunity? Write to me, I reply within 24 to 48h.",
         form_name: "_Name",
         form_message: "_Message",
         form_submit: "send_message();",
@@ -384,20 +406,16 @@ function applyLanguage(lang) {
         }
     });
 
-    // Update html lang attribute
     document.documentElement.lang = lang;
 
-    // Update button label: show the OTHER language
     const label = document.getElementById('langLabel');
     if (label) label.textContent = lang === 'fr' ? 'EN' : 'FR';
 }
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Apply saved language on load
     applyLanguage(currentLang);
 
-    // Language switcher click
     const langSwitcher = document.getElementById('langSwitcher');
     if (langSwitcher) {
         langSwitcher.addEventListener('click', () => {
@@ -434,22 +452,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ==================== SCROLL REVEAL ====================
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -60px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('in');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.section, .project-card, .skill-category, .timeline-item, .hobby-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease';
-        observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     // ==================== TABS PROJETS ====================
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -467,7 +480,6 @@ document.addEventListener('DOMContentLoaded', function () {
         contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const btn = this.querySelector('.submit-btn');
-            const originalText = btn.textContent;
             btn.textContent = currentLang === 'fr' ? 'envoi_en_cours...' : 'sending...';
             btn.disabled = true;
             const data = new FormData(this);
@@ -488,6 +500,62 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.disabled = false;
             }
         });
+    }
+
+    // ==================== ANIMATED NETWORK BACKGROUND ====================
+    const canvas = document.getElementById('net-bg');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let w, h, particles;
+
+        function resize() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        const COUNT = Math.min(90, Math.floor((w * h) / 18000));
+        particles = Array.from({ length: COUNT }, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            c: Math.random() > 0.5 ? '59,140,255' : '47,224,166'
+        }));
+
+        function tick() {
+            ctx.clearRect(0, 0, w, h);
+            for (const p of particles) {
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > w) p.vx *= -1;
+                if (p.y < 0 || p.y > h) p.vy *= -1;
+            }
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const a = particles[i], b = particles[j];
+                    const dx = a.x - b.x, dy = a.y - b.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 150) {
+                        ctx.strokeStyle = `rgba(140,170,210,${0.12 * (1 - dist / 150)})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            for (const p of particles) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${p.c},0.85)`;
+                ctx.shadowBlur = 6;
+                ctx.shadowColor = `rgba(${p.c},0.7)`;
+                ctx.fill();
+            }
+            requestAnimationFrame(tick);
+        }
+        tick();
     }
 });
 
