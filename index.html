@@ -6,13 +6,19 @@
     <title>ESPOH - Développeur Full Stack & Informaticien</title>
     <meta name="description" content="Portfolio d'Espoir Sehoun - Développeur Full Stack spécialisé en Laravel, PHP et solutions digitales.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="net-bg"></canvas>
+    <div class="glow-blob b1"></div>
+    <div class="glow-blob b2"></div>
+    <div class="glow-blob b3"></div>
+
     <header class="header">
         <nav>
-            <div class="logo">ESPOH</div>
+            <div class="logo">ESP</div>
             <ul class="nav-links">
                 <li><a href="#accueil" data-i18n="nav_home">_Accueil</a></li>
                 <li><a href="#apropos" data-i18n="nav_about">_Apropos</a></li>
@@ -36,19 +42,17 @@
     <main>
         <!-- HERO -->
         <section id="accueil" class="hero">
-            <div class="container">
-                <div class="hero-split">
-                    <div class="hero-photo">
-                        <div class="photo-frame">
-                            <img src="profil.jpg" alt="Espoir Sehoun - Développeur Full Stack">
-                            <div class="data-flow"></div>
-                        </div>
-                    </div>
+            <div class="wrap">
+                <div class="hero-status"><span class="hero-dot"></span><span data-i18n="hero_status">DISPONIBLE</span></div>
+                <div class="hero-grid">
                     <div class="hero-content">
-                        <span class="hero-tag">&lt;hello_world/&gt;</span>
-                        <h1>Espoir<br>Sehoun</h1>
-                        <span class="highlight" data-i18n="hero_title">Développeur Full Stack | Administrateur Réseau et Système</span>
+                        <h1>Espoir <span class="grad-text">Sehoun</span></h1>
+                        <span class="hero-role" data-i18n="hero_title">Développeur Full Stack | Administrateur Réseau et Système</span>
                         <p class="hero-description" data-i18n="hero_desc">Je transforme des lignes de code en solutions qui résolvent des problèmes réels. Basé au Bénin, je crée pour le monde.</p>
+                        <div class="hero-buttons">
+                            <a href="#projets" class="cta-button primary" data-i18n="btn_projects">Voir mes projets</a>
+                            <a href="#contact" class="cta-button secondary" data-i18n="btn_contact">Me contacter</a>
+                        </div>
                         <div class="hero-stats">
                             <div class="stat-item">
                                 <span class="stat-number">5+</span>
@@ -63,10 +67,12 @@
                                 <span class="stat-label" data-i18n="stat_techs">Technos</span>
                             </div>
                         </div>
-                        <div class="hero-buttons">
-                            <a href="#projets" class="cta-button primary" data-i18n="btn_projects">Voir mes projets</a>
-                            <a href="#contact" class="cta-button secondary" data-i18n="btn_contact">Me contacter</a>
+                    </div>
+                    <div class="hero-photo glass">
+                        <div class="photo-frame">
+                            <img src="profil.jpg" alt="Espoir Sehoun - Développeur Full Stack">
                         </div>
+                        <div class="photo-caption"><span class="mono">NODE_01</span><b>ESPOIR SEHOUN</b></div>
                     </div>
                 </div>
             </div>
@@ -74,62 +80,33 @@
 
         <!-- À PROPOS -->
         <section id="apropos" class="section about">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="about_title">_Qui_suis_je</span></h2>
-                <div class="about-content">
-                    <div class="about-text">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_about">// qui_suis_je</span>
+                    <h2 class="section-title"><span data-i18n="about_title2">À propos</span></h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text glass reveal">
                         <p data-i18n="about_text">À 21 ans, j'ai déjà conçu plusieurs plateformes web utilisées par des professionnels. Ma passion ? Démocratiser la tech à travers des outils simples et puissants. Je ne code pas juste pour coder - je code pour impacter. Polyvalent, je maîtrise aussi bien le développement web que l'administration réseau et la maintenance informatique.</p>
                     </div>
-                    <div class="personal-info-grid">
-                        <div class="info-item">
-                            <i class="fas fa-birthday-cake"></i>
-                            <div>
-                                <h3 data-i18n="info_birth">_naissance</h3>
-                                <p>07.02.2005</p>
-                            </div>
+                    <div class="terminal glass reveal">
+                        <div class="terminal-bar">
+                            <span class="td red"></span><span class="td yellow"></span><span class="td green"></span>
+                            <span class="terminal-title">espoir@eneam:~</span>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3 data-i18n="info_location">_localisation</h3>
-                                <p>Womey, Bénin</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-flag"></i>
-                            <div>
-                                <h3 data-i18n="info_nationality">_nationalité</h3>
-                                <p data-i18n="info_nationality_val">Béninoise</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>_email</h3>
-                                <p>espoirsehoun@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="languages-grid">
-                        <div class="info-item">
-                            <i class="fas fa-language"></i>
-                            <div>
-                                <h3>_français</h3>
-                                <p data-i18n="lang_very_good">Très bien</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-language"></i>
-                            <div>
-                                <h3>_anglais</h3>
-                                <p data-i18n="lang_good">Bien</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-language"></i>
-                            <div>
-                                <h3>_fon</h3>
-                                <p data-i18n="lang_very_good2">Très bien</p>
+                        <div class="terminal-body">
+                            <p class="terminal-line"><span class="prompt">$</span> whoami</p>
+                            <ul class="sysinfo-list">
+                                <li><span class="key" data-i18n="info_birth">_naissance</span><span class="val">07.02.2005</span></li>
+                                <li><span class="key" data-i18n="info_location">_localisation</span><span class="val">Womey, Bénin</span></li>
+                                <li><span class="key" data-i18n="info_nationality">_nationalité</span><span class="val" data-i18n="info_nationality_val">Béninoise</span></li>
+                                <li><span class="key">_email</span><span class="val">espoirsehoun@gmail.com</span></li>
+                            </ul>
+                            <p class="terminal-line"><span class="prompt">$</span> <span data-i18n="about_cmd2">langues --list</span></p>
+                            <div class="lang-tags">
+                                <span class="lang-tag">FR <i data-i18n="lang_very_good">Très bien</i></span>
+                                <span class="lang-tag">EN <i data-i18n="lang_good">Bien</i></span>
+                                <span class="lang-tag">FON <i data-i18n="lang_very_good2">Très bien</i></span>
                             </div>
                         </div>
                     </div>
@@ -139,10 +116,13 @@
 
         <!-- EXPÉRIENCES -->
         <section id="experiences" class="section experiences">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="exp_title">_Expériences</span></h2>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_exp">// journal_de_bord</span>
+                    <h2 class="section-title" data-i18n="exp_title2">Expériences</h2>
+                </div>
 
-                <div class="experience-card">
+                <div class="experience-card glass reveal">
                     <div class="exp-header">
                         <div class="exp-company">
                             <i class="fas fa-network-wired"></i>
@@ -172,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="experience-card">
+                <div class="experience-card glass reveal">
                     <div class="exp-header">
                         <div class="exp-company">
                             <i class="fas fa-building"></i>
@@ -204,9 +184,12 @@
 
         <!-- PROJETS -->
         <section id="projets" class="section projets">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="projects_title">_Projets</span></h2>
-                <div class="projects-tabs">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_projects">// build_log</span>
+                    <h2 class="section-title" data-i18n="projects_title2">Projets</h2>
+                </div>
+                <div class="projects-tabs reveal">
                     <button class="tab-btn active" data-tab="web">
                         <i class="fas fa-code"></i> Web
                     </button>
@@ -219,7 +202,7 @@
                 <div class="tab-content active" id="tab-web">
 
                     <!-- GestionNotes -->
-                    <div class="project-block">
+                    <div class="project-block glass reveal">
                         <div class="project-gallery">
                             <div class="gallery-main">
                                 <img src="gestion-home.png" alt="Landing GestionNotes" class="gallery-img" onclick="openLightbox(this)">
@@ -260,7 +243,7 @@
                     </div>
 
                     <!-- Plateforme Immobilière -->
-                    <div class="project-block reverse">
+                    <div class="project-block glass reverse reveal">
                         <div class="project-details">
                             <div class="project-header">
                                 <i class="fas fa-home project-icon"></i>
@@ -301,7 +284,7 @@
                     </div>
 
                     <!-- Mini ATS -->
-                    <div class="project-block">
+                    <div class="project-block glass reveal">
                         <div class="project-gallery">
                             <div class="gallery-main">
                                 <img src="ats-dashboard.png" alt="Dashboard Mini ATS" class="gallery-img" onclick="openLightbox(this)">
@@ -340,7 +323,7 @@
                     </div>
 
                     <!-- Wiki IT -->
-                    <div class="project-block reverse">
+                    <div class="project-block glass reverse reveal">
                         <div class="project-details">
                             <div class="project-header">
                                 <i class="fas fa-book project-icon"></i>
@@ -379,7 +362,7 @@
                     </div>
 
                     <!-- La Maison Vincent de Paul -->
-                    <div class="project-block">
+                    <div class="project-block glass reveal">
                         <div class="project-gallery">
                             <div class="gallery-main">
                                 <img src="vincent-home.png" alt="La Maison Vincent de Paul" class="gallery-img" onclick="openLightbox(this)">
@@ -422,7 +405,7 @@
                 <div class="tab-content" id="tab-reseau">
 
                     <!-- NetAudit -->
-                    <div class="network-card">
+                    <div class="network-card glass reveal">
                         <div class="project-gallery">
                             <div class="gallery-main">
                                 <img src="netaudit-topology.png" alt="NetAudit - Topologie réseau" class="gallery-img" onclick="openLightbox(this)">
@@ -458,7 +441,7 @@
                     </div>
 
                     <!-- Infrastructure Multisite -->
-                    <div class="network-card">
+                    <div class="network-card glass reveal">
                         <div class="network-img">
                             <img src="reseau2.png" alt="Infrastructure Multisite Avancée" onclick="openLightbox(this)">
                             <span class="network-zoom"><i class="fas fa-search-plus"></i></span>
@@ -495,109 +478,112 @@
 
         <!-- COMPÉTENCES -->
         <section id="competences" class="section competences">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="skills_title">_Compétences</span></h2>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_skills">// stack.json</span>
+                    <h2 class="section-title" data-i18n="skills_title2">Compétences</h2>
+                </div>
                 <div class="skills-grid">
-                    <div class="skill-category">
+                    <div class="skill-category glass reveal">
                         <div class="category-header">
-                            <i class="fas fa-code category-icon"></i>
+                            <div class="category-icon"><i class="fas fa-code"></i></div>
                             <h3 data-i18n="skills_web">Développement Web & Applications</h3>
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <span class="skill-name">Frontend :</span>
+                                <span class="skill-name">Frontend</span>
                                 <div class="skill-tags"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">React</span><span class="tech-tag">Tailwind CSS</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Backend :</span>
+                                <span class="skill-name">Backend</span>
                                 <div class="skill-tags"><span class="tech-tag">PHP</span><span class="tech-tag">Laravel</span><span class="tech-tag">Python</span><span class="tech-tag">Flask</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_db">Bases de données :</span>
+                                <span class="skill-name" data-i18n="skill_db">Bases de données</span>
                                 <div class="skill-tags"><span class="tech-tag">MySQL</span><span class="tech-tag">Oracle Database</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Low-code / RAD :</span>
+                                <span class="skill-name">Low-code / RAD</span>
                                 <div class="skill-tags"><span class="tech-tag">Oracle APEX</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_security">Sécurité :</span>
+                                <span class="skill-name" data-i18n="skill_security">Sécurité</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_auth">Authentification</span><span class="tech-tag" data-i18n="sk_roles">Gestion des rôles</span><span class="tech-tag" data-i18n="sk_appsec">Sécurité applicative</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Data :</span>
+                                <span class="skill-name">Data</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_dashboards">Tableaux de bord</span><span class="tech-tag" data-i18n="sk_stats">Statistiques</span><span class="tech-tag" data-i18n="sk_charts">Graphiques</span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category glass reveal">
                         <div class="category-header">
-                            <i class="fas fa-network-wired category-icon"></i>
+                            <div class="category-icon"><i class="fas fa-network-wired"></i></div>
                             <h3 data-i18n="skills_network">Réseaux & Systèmes</h3>
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_admin">Administration :</span>
+                                <span class="skill-name" data-i18n="skill_admin">Administration</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_network_junior">Réseau (junior)</span><span class="tech-tag" data-i18n="sk_ipconfig">Configuration IP</span><span class="tech-tag" data-i18n="sk_routing">Routage</span><span class="tech-tag">VLAN</span><span class="tech-tag">NAT</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_simulation">Simulation :</span>
+                                <span class="skill-name" data-i18n="skill_simulation">Simulation</span>
                                 <div class="skill-tags"><span class="tech-tag">GNS3</span><span class="tech-tag">Cisco Packet Tracer</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_equipment">Équipements :</span>
+                                <span class="skill-name" data-i18n="skill_equipment">Équipements</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_cisco">Cisco (bases CCNA)</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_security">Sécurité :</span>
+                                <span class="skill-name" data-i18n="skill_security">Sécurité</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_netsec">Notions sécurité réseau</span><span class="tech-tag">Firewall</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_systems">Systèmes :</span>
+                                <span class="skill-name" data-i18n="skill_systems">Systèmes</span>
                                 <div class="skill-tags"><span class="tech-tag">Windows</span><span class="tech-tag">Linux</span><span class="tech-tag">DNS</span><span class="tech-tag" data-i18n="sk_hosting">Hébergements</span><span class="tech-tag">Windows Server</span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category glass reveal">
                         <div class="category-header">
-                            <i class="fas fa-tools category-icon"></i>
+                            <div class="category-icon"><i class="fas fa-tools"></i></div>
                             <h3 data-i18n="skills_maintenance">Maintenance Informatique</h3>
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_systems">Systèmes :</span>
+                                <span class="skill-name" data-i18n="skill_systems">Systèmes</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_osinstall">Installation OS</span><span class="tech-tag" data-i18n="sk_config">Configuration</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_hardware">Matériel :</span>
+                                <span class="skill-name" data-i18n="skill_hardware">Matériel</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_assembly">Montage</span><span class="tech-tag" data-i18n="sk_maintenance">Maintenance</span><span class="tech-tag" data-i18n="sk_troubleshoot">Dépannage</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_software">Logiciel :</span>
+                                <span class="skill-name" data-i18n="skill_software">Logiciel</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_softtrouble">Dépannage logiciel</span><span class="tech-tag" data-i18n="sk_periph">Gestion périphériques</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_network_label">Réseau :</span>
+                                <span class="skill-name" data-i18n="skill_network_label">Réseau</span>
                                 <div class="skill-tags"><span class="tech-tag" data-i18n="sk_networking">Mise en réseau d'ordinateurs</span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category glass reveal">
                         <div class="category-header">
-                            <i class="fas fa-toolbox category-icon"></i>
+                            <div class="category-icon"><i class="fas fa-toolbox"></i></div>
                             <h3 data-i18n="skills_tools">Outils & Logiciels</h3>
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_versioning">Versioning :</span>
+                                <span class="skill-name" data-i18n="skill_versioning">Versioning</span>
                                 <div class="skill-tags"><span class="tech-tag">GitHub</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_management">Gestion :</span>
+                                <span class="skill-name" data-i18n="skill_management">Gestion</span>
                                 <div class="skill-tags"><span class="tech-tag">Trello</span></div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name" data-i18n="skill_office">Bureautique :</span>
+                                <span class="skill-name" data-i18n="skill_office">Bureautique</span>
                                 <div class="skill-tags"><span class="tech-tag">Word</span><span class="tech-tag">Excel</span><span class="tech-tag">PowerPoint</span></div>
                             </div>
                         </div>
@@ -608,28 +594,44 @@
 
         <!-- PARCOURS -->
         <section id="parcours" class="section parcours">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="parcours_title">_Parcours</span></h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2025 – 2026</div>
-                        <h3 data-i18n="parcours_1_title">Licence 3 — Administration des Réseaux Informatiques</h3>
-                        <p data-i18n="parcours_1_school">ENEAM de Gbégamey, Cotonou</p>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_parcours">// traceroute --edu</span>
+                    <h2 class="section-title" data-i18n="parcours_title2">Parcours</h2>
+                </div>
+                <div class="route-timeline">
+                    <div class="route-line"></div>
+                    <div class="route-item reveal">
+                        <div class="route-node"></div>
+                        <div class="route-card glass">
+                            <span class="route-tag mono">HOP 01 · 2025 – 2026</span>
+                            <h3 data-i18n="parcours_1_title">Licence 3 — Administration des Réseaux Informatiques</h3>
+                            <p data-i18n="parcours_1_school">ENEAM de Gbégamey, Cotonou</p>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024 – 2025</div>
-                        <h3 data-i18n="parcours_2_title">Licence 2 — Informatique de Gestion</h3>
-                        <p data-i18n="parcours_2_school">ENEAM de Gbégamey, Cotonou</p>
+                    <div class="route-item reveal">
+                        <div class="route-node"></div>
+                        <div class="route-card glass">
+                            <span class="route-tag mono">HOP 02 · 2024 – 2025</span>
+                            <h3 data-i18n="parcours_2_title">Licence 2 — Informatique de Gestion</h3>
+                            <p data-i18n="parcours_2_school">ENEAM de Gbégamey, Cotonou</p>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023 – 2024</div>
-                        <h3 data-i18n="parcours_3_title">Licence 1 — Informatique de Gestion</h3>
-                        <p data-i18n="parcours_3_school">ENEAM de Gbégamey, Cotonou</p>
+                    <div class="route-item reveal">
+                        <div class="route-node"></div>
+                        <div class="route-card glass">
+                            <span class="route-tag mono">HOP 03 · 2023 – 2024</span>
+                            <h3 data-i18n="parcours_3_title">Licence 1 — Informatique de Gestion</h3>
+                            <p data-i18n="parcours_3_school">ENEAM de Gbégamey, Cotonou</p>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023</div>
-                        <h3 data-i18n="parcours_4_title">Baccalauréat Scientifique — Série D</h3>
-                        <p data-i18n="parcours_4_school">Collège « La Plénitude » d'Atrokpocodji — Mention Assez Bien</p>
+                    <div class="route-item reveal">
+                        <div class="route-node"></div>
+                        <div class="route-card glass">
+                            <span class="route-tag mono">HOP 04 · 2023</span>
+                            <h3 data-i18n="parcours_4_title">Baccalauréat Scientifique — Série D</h3>
+                            <p data-i18n="parcours_4_school">Collège « La Plénitude » d'Atrokpocodji — Mention Assez Bien</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -637,9 +639,12 @@
 
         <!-- ENTREPRENEURIAT -->
         <section class="section complementary">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="entrepr_title">_Entrepreneuriat</span></h2>
-                <div class="complementary-card">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_entrepr">// side_hustle</span>
+                    <h2 class="section-title" data-i18n="entrepr_title2">Entrepreneuriat</h2>
+                </div>
+                <div class="complementary-card glass reveal">
                     <div class="complementary-icon"><i class="fas fa-store"></i></div>
                     <div class="complementary-content">
                         <h3 data-i18n="entrepr_heading">Importation & Vente de produits</h3>
@@ -661,10 +666,20 @@
 
         <!-- CONTACT -->
         <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title"><span data-i18n="contact_title">_Contact</span></h2>
-                <div class="contact-container">
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xnjbyblq" method="POST">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="section-eyebrow" data-i18n="eyebrow_contact">// uplink</span>
+                    <h2 class="section-title" data-i18n="contact_title2">Contact</h2>
+                </div>
+                <div class="contact-container reveal">
+                    <div class="contact-side glass">
+                        <h3 data-i18n="contact_side_title">Parlons-en</h3>
+                        <p data-i18n="contact_side_text">Une idée, un projet, une opportunité ? Écris-moi, je réponds sous 24 à 48h.</p>
+                        <a href="mailto:espoirsehoun@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> espoirsehoun@gmail.com</a>
+                        <a href="https://wa.me/22946151511" class="contact-item"><i class="fab fa-whatsapp"></i> +229 46 15 15 11</a>
+                        <a href="https://github.com/espoir147" class="contact-item"><i class="fab fa-github"></i> github.com/espoir147</a>
+                    </div>
+                    <form class="contact-form glass" id="contactForm" action="https://formspree.io/f/xnjbyblq" method="POST">
                         <input type="hidden" name="_subject" value="📬 Nouveau message depuis votre portfolio ESPOH">
                         <input type="hidden" name="_next" value="https://espoir147.github.io/cv/merci.html">
                         <div class="form-group">
@@ -681,17 +696,13 @@
                         </div>
                         <button type="submit" class="submit-btn" data-i18n="form_submit">envoyer_message();</button>
                     </form>
-                    <div class="contact-info">
-                        <a href="mailto:espoirsehoun@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> espoirsehoun@gmail.com</a>
-                        <a href="https://wa.me/22946151511" class="contact-item"><i class="fab fa-whatsapp"></i> +229 46 15 15 11</a>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="wrap">
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>ESPOH</h3>
